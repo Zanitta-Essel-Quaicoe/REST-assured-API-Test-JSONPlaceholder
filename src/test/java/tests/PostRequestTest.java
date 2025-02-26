@@ -5,12 +5,17 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
+@ExtendWith(io.qameta.allure.junit5.AllureJunit5.class)
+@Epic("API Testing")
+@Feature("POST Requests")
 public class PostRequestTest {
 
     static {

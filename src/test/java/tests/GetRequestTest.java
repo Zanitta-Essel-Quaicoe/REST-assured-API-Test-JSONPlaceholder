@@ -4,12 +4,14 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.extension.ExtendWith;
 import io.qameta.allure.*;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.*;
 
+@ExtendWith(io.qameta.allure.junit5.AllureJunit5.class)
 @Epic("API Testing")
 @Feature("GET Requests")
 public class GetRequestTest {

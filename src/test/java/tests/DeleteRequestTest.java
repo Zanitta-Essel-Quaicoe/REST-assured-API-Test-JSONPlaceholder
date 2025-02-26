@@ -4,10 +4,15 @@ import io.restassured.RestAssured;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
+@ExtendWith(io.qameta.allure.junit5.AllureJunit5.class)
+@Epic("API Testing")
+@Feature("DELETE Requests")
 public class DeleteRequestTest {
 
     static {
